@@ -19,28 +19,32 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-import pwm_pkg::*;
+import PKG_pwm::*;
 
 module register_mask_16bits(
     input clk,
     input reset,
     input logic mask_event,
+    input _pwm_onoff pwm_onoff,
     input logic [15:0] reg_in,
     output logic [15:0] reg_out
     );
     
     logic refresh;
     
-    always_ff @(posedge clk) begin
+    always_ff @(posedge clk, posedge reset) begin
 
-        if(mask_event==1'b1) begin
+        if(mask_event==1'b1 || pwm_onoff==PWM_OFF) begin
+            reg_out <= reg_in;
+        end
+        if(reset) begin
             reg_out <= reg_in;
         end
     end
     
-    always_ff @(posedge reset) begin    
-        if(reset) begin
-            reg_out = 0;
-        end
-    end
+//    always_ff @(posedge reset) begin    
+//        if(reset) begin
+//            reg_out <= reg_in;
+//        end
+//    end
 endmodule

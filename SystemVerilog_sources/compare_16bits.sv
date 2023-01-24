@@ -20,19 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module pwm_compare_16bits (
+module compare_16bits (
     input [15:0] carrier,
     input [15:0] compare,
+    input _pwm_onoff pwm_onoff,
     output logic pwm
     );
     
     
     always_comb begin
         if(carrier >= compare) begin
-            pwm = 'd0;  
+            pwm = 'd0 && pwm_onoff;  
         end
         else begin
-            pwm = 'd1; 
+            pwm = 'd1 && pwm_onoff; 
         end
     end
     
