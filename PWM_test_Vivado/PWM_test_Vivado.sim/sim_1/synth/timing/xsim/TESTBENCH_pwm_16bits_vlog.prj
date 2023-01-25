@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"TESTBENCH_pwm_16bits_time_synth.v" \
+
+sv xil_defaultlib  \
+"../../../../../../SystemVerilog_sources/PKG_pwm.sv" \
+"../../../../../../SystemVerilog_sources/TESTBENCH_pwm_16bits.sv" \
+
+# Do not sort compile order
+nosort

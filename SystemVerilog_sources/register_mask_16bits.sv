@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 10ns / 10ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -38,7 +38,7 @@ module register_mask_16bits(
             reg_out <= reg_in;
         end
         if(reset) begin
-            reg_out <= reg_in;
+            reg_out <= 0;
         end
     end
     

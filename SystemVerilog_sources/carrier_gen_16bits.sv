@@ -34,11 +34,19 @@ module carrier_gen_16bits(
     
     enum bit {UP, DOWN} state_carrier;
     logic carrier_mask;
+    logic [15:0] init_carr_buff;
     
-    always_ff @(posedge clk,posedge reset) begin
+    always_ff @(posedge clk or posedge reset) begin
+        
+        if(reset==1'b1) begin
+            state_carrier <= UP;
+            carrier <= 0;
+            carrier_mask <= 0;
+            mask_event <= 1'b0;
+        end
         
         //PWM off
-        if (pwm_onoff==PWM_OFF) begin
+        else if (pwm_onoff==PWM_OFF) begin
             carrier <= 15'b0;
             carrier_mask <= 1'b0;
         end
@@ -48,9 +56,14 @@ module carrier_gen_16bits(
             if(carrier_mask==0) begin
                 carrier <= init_carr - 1'b0;
                 carrier_mask <= 1'b1;
+                init_carr_buff <= init_carr;
+            end
+            
+            if(init_carr_buff!=init_carr) begin
+                carrier_mask <= 1'b0;
             end
         
-            if(period>'d0) begin
+            else if(carrier_mask==1 && period>'d0) begin
                 //up count
                 if (state_carrier == UP) begin
                     if(count_mode==COUNT_UP || count_mode==COUNT_UPDOWN) begin
@@ -70,10 +83,10 @@ module carrier_gen_16bits(
                     end
                 end
             
-                if (carrier == (period-1)) begin
+                if (carrier >= (period-1)) begin
                     state_carrier <= DOWN;
                 end
-                else if (carrier == (1'b1)) begin
+                else if (carrier <= (1'b1)) begin
                     state_carrier <= UP;
                 end
             end
@@ -88,31 +101,6 @@ module carrier_gen_16bits(
                 mask_event  <= 1'b0;
             end
         end 
-        
-        if(reset==1'b1) begin
-            state_carrier <= UP;
-            carrier <= 0;
-            carrier_mask <= 0;
-            mask_event <= 1'b0;
-        end
-        
-        
-    end
-    
-//    always_ff @(posedge reset) begin
-//        if(reset==1'b1) begin
-//            state_carrier <= UP;
-//            carrier <= 0;
-//            carrier_mask <= 0;
-//            mask_event <= 1'b0;
-//        end
-//    end  
-    
-//    always_ff @(posedge pwm_onoff) begin
-//        if(carrier_mask==0) begin
-//            carrier <= init_carr - 1'b0;
-//            carrier_mask <= 1'b1;
-//        end
-//    end  
+    end 
     
 endmodule
