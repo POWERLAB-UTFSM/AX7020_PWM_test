@@ -24,51 +24,64 @@ module dead_time (
     input clk,
 	input reset,
 	input pwm,
-	input [7:0] dtime,
+	input [7:0] dtime_A,
+	input [7:0] dtime_B,
+	input logic_A,
+	input logic_B,
+	input _pwm_onoff pwm_onoff,
 	output logic pwmout_A,
 	output logic pwmout_B
     );
     
     logic [7:0] dtcounter_A;
     logic [7:0] dtcounter_B;
+    logic pwmaux_A;
+    logic pwmaux_B;
     logic pwm_A;
     logic pwm_B;
     
     always_comb begin
         pwm_A=pwm;
         pwm_B=~pwm;
+        
     end
+    
+    always_comb begin
+        pwmout_A=(pwmaux_A ^ logic_A) && pwm_onoff;
+        pwmout_B=(pwmaux_B ^ logic_B) && pwm_onoff;
+    end
+
     
     always_ff  @(posedge clk, posedge reset) begin
 		if(reset) begin
-			pwmout_A <= 0;
-			pwmout_B <= 0;
-			dtcounter_A <= 0;
-			dtcounter_B <= 0;
+			pwmaux_A = 0;
+			pwmaux_B = 0;
+			dtcounter_A = 0;
+			dtcounter_B = 0;
 		end
 		else begin
-		    if (pwm_A==1 && dtcounter_A < dtime && pwmout_A==0) begin
+		    if (pwm_A==1 && dtcounter_A < dtime_A && pwmaux_A==0) begin
                 dtcounter_A <= dtcounter_A + 1;
-                pwmout_A <= 0;        
+                pwmaux_A = 0;        
             end
-            else if (pwm_A==1 && dtcounter_A >= dtime && pwmout_A==0) begin
+            else if (pwm_A==1 && dtcounter_A >= dtime_A && pwmaux_A==0) begin
                 dtcounter_A <= 0;
-                pwmout_A <= 1;
+                pwmaux_A = 1;
             end
             else begin
-                pwmout_A <= pwm_A;
+                pwmaux_A = pwm_A;
             end
             
-            if (pwm_B==1 && dtcounter_B < dtime && pwmout_B==0) begin
+            if (pwm_B==1 && dtcounter_B < dtime_B && pwmaux_B==0) begin
                 dtcounter_B <= dtcounter_B + 1;
-                pwmout_B <= 0;        
+                pwmaux_B = 0;        
             end
-            else if (pwm_B==1 && dtcounter_B >= dtime && pwmout_B==0) begin
+            else if (pwm_B==1 && dtcounter_B >= dtime_B && pwmaux_B==0) begin
                 dtcounter_B <= 0;
-                pwmout_B <= 1;
+                pwmaux_B = 1;
             end
             else begin
-                pwmout_B <= pwm_B;
+                pwmaux_B = pwm_B;
             end
 		end
     end

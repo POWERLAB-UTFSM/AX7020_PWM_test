@@ -29,7 +29,6 @@ module TESTBENCH_pwm_16bits();
     logic [15:0] init_carr;
     logic [15:0] compare;
     logic [4:0] clk_divider;
-    logic [7:0] dtime;
     logic [15:0] carrier;
     _count_mode count_mode;
     _mask_mode mask_mode;
@@ -38,6 +37,10 @@ module TESTBENCH_pwm_16bits();
     logic pwmout_A;
     logic pwmout_B;
     logic pwm_clk;
+    logic [7:0] dtime_A;
+    logic [7:0] dtime_B;
+    logic [7:0] logic_A;
+    logic [7:0] logic_B;
 
 //=============================================================
 //  Clock & Reset generator
@@ -57,10 +60,14 @@ module TESTBENCH_pwm_16bits();
         init_carr ='d500;
         compare ='d1000; 
         clk_divider ='d0;
-        dtime ='d10;
         count_mode = COUNT_UPDOWN;
         mask_mode = MAX_MASK;
         pwm_onoff = PWM_OFF;
+        
+        dtime_A = 10;
+        dtime_B = 10;
+        logic_A = 0;
+        logic_B = 0;
         
         repeat(1) @(posedge clk);       //One free clock cycle for the reset signal
         
@@ -89,15 +96,17 @@ pwm_16bits DUT1(
         .init_carr,
         .compare,
         .clk_divider,
-        .dtime,
         .count_mode,
         .mask_mode,
         .pwm_onoff,
+        .dtime_A,
+        .dtime_B,
+        .logic_A,
+        .logic_B,
         .pwm,
         .pwmout_A,
         .pwmout_B,
-        .pwm_clk,
-        .carrier
+        .pwm_clk
     );	
 		
 //=============================================================

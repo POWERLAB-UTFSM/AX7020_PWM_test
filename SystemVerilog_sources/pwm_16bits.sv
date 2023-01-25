@@ -34,21 +34,31 @@ module pwm_16bits  (
     // PWM compare 
     input [15:0] compare,
     input [4:0] clk_divider,
-    logic [7:0] dtime,
     input _count_mode count_mode,
     input _mask_mode mask_mode,
     input _pwm_onoff pwm_onoff,
+    
+    input [7:0] dtime_A,
+    input [7:0] dtime_B,
+    input logic_A,
+    input logic_B,
+    
     output logic pwm,
     output logic pwmout_A,
     output logic pwmout_B,
-    output logic pwm_clk,
-    output logic[15:0] carrier
+    output logic pwm_clk
+
     );
+    
+    //
+    // Internal Signal definition
+    //
     
     logic [15:0] period_mask;
     logic [15:0] compare_mask;
     logic [15:0] init_carr_mask;
     logic mask_event;
+    logic[15:0] carrier;
     
     
     div_pwm_clock PWMCLK(
@@ -109,7 +119,11 @@ module pwm_16bits  (
        .clk,
 	   .reset,
 	   .pwm,
-	   .dtime,
+	   .dtime_A,
+	   .dtime_B,
+	   .logic_A,
+	   .logic_B,
+	   .pwm_onoff,
 	   .pwmout_A,
 	   .pwmout_B
     );
