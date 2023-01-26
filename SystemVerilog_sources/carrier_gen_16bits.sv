@@ -23,18 +23,18 @@ import PKG_pwm::*;
 module carrier_gen_16bits(
     input clk,
     input reset,
-    input [15:0] period,
-    input [15:0] init_carr,
+    input [`PWMCOUNT_WIDTH:0] period,
+    input [`PWMCOUNT_WIDTH:0] init_carr,
     input _count_mode count_mode,
     input _mask_mode mask_mode,
     input _pwm_onoff pwm_onoff,
-    output logic [15:0] carrier,
+    output logic [`PWMCOUNT_WIDTH:0] carrier,
     output logic mask_event
     );
     
     enum bit {UP, DOWN} state_carrier;
     logic carrier_mask;
-    logic [15:0] init_carr_buff;
+    logic [`PWMCOUNT_WIDTH:0] init_carr_buff;
     
     always_ff @(posedge clk or posedge reset) begin
         

@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="TESTBENCH_pwm_16bits_behav.wdb" id="1">
+      <db_ref path="TESTBENCH_pwm_16bits_time_impl.wdb" id="1">
          <top_modules>
             <top_module name="PKG_pwm" />
             <top_module name="TESTBENCH_pwm_16bits" />
@@ -12,18 +12,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="318.605000 us"></ZoomStartTime>
-      <ZoomEndTime time="392.255001 us"></ZoomEndTime>
-      <Cursor1Time time="338.905000 us"></Cursor1Time>
+      <ZoomStartTime time="940.443455 us"></ZoomStartTime>
+      <ZoomEndTime time="1,025.343456 us"></ZoomEndTime>
+      <Cursor1Time time="954.593455 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="140"></NameColumnWidth>
+      <NameColumnWidth column_width="124"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="14" />
    <wave_markers>
-      <marker time="109845100" label="" />
-      <marker time="330249000" label="" />
+      <marker time="955794335" label="" />
    </wave_markers>
    <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -33,7 +32,7 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/pwm_onoff" type="other">
+   <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/pwm_onoff" type="logic">
       <obj_property name="ElementShortName">pwm_onoff</obj_property>
       <obj_property name="ObjectShortName">pwm_onoff</obj_property>
    </wvobject>
@@ -80,10 +79,6 @@
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/pwm" type="logic">
-      <obj_property name="ElementShortName">pwm</obj_property>
-      <obj_property name="ObjectShortName">pwm</obj_property>
    </wvobject>
    <wvobject fp_name="/TESTBENCH_pwm_16bits/pwmout_A" type="logic">
       <obj_property name="ElementShortName">pwmout_A</obj_property>

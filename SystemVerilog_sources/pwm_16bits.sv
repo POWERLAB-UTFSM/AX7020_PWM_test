@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Dr.-Ing. Alan Wilson
 // 
 // Create Date: 01/23/2023 11:33:04 PM
 // Design Name: 
@@ -10,58 +10,95 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
+// SystemVerilog module for a Pulse Width Modulation (PWM) generator for power electronic converters using 16 bits timer registers. Includes dead time, multiple event triggers and masked input register from events
 // 
 // Dependencies: 
-// 
+//      Package definition:
+//                          'PKG_pwm.sv'
+//      Submodules:
+//                          'carrier_gen_16bits.sv'
+//                          'compare_16bits.sv'
+//                          'dead_time.sv'
+//                          'div_clock.sv'
+//                          'register_mask_16bits.sv'
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+// IMPORTED PACKAGES
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 import PKG_pwm::*;
 
 module pwm_16bits  (
+    // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    // INPUTS
+    // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 
     // system clock
     input clk,
     // system reset
     input reset,
     // PWM carrier period
-    input [15:0] period,
+    input [`PWMCOUNT_WIDTH:0] period,
     // PWM initial carrier value
-    input [15:0] init_carr,
+    input [`PWMCOUNT_WIDTH:0] init_carr,
     // PWM compare 
-    input [15:0] compare,
-    input [4:0] pwmclk_divider,
-    input [4:0] dtclk_divider,
+    input [`PWMCOUNT_WIDTH:0] compare,
+    // clock divider for PWM
+    input [`DIVCLK_WIDTH:0] pwmclk_divider,
+    // clock driver for the dead time generator
+    input [`DIVCLK_WIDTH:0] dtclk_divider,
+    // count mode configuration bits
     input _count_mode count_mode,
+    // event mask mode configuration bits (defined and packaged in PKG_pwm.sv)
     input _mask_mode mask_mode,
+    // ON-OFF state configuration bit (defined and packaged in PKG_pwm.sv)
     input _pwm_onoff pwm_onoff,
-    
-    input [7:0] dtime_A,
-    input [7:0] dtime_B,
+    // dead time value for pulse A
+    input [`DTCOUNT_WIDTH:0] dtime_A,
+    // dead time value for pulse B
+    input [`DTCOUNT_WIDTH:0] dtime_B,
+    // logic value of PWM output A
     input logic_A,
+    // logic value of PWM output B
     input logic_B,
-    
-    output logic pwm,
+    // logic value of PWM output A
+    // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    // OUTPUTS
+    // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 
+    // PWM output signal A
     output logic pwmout_A,
-    output logic pwmout_B,
-    output logic pwm_clk
-    
+    // PWM output signal B
+    output logic pwmout_B
     );
     
     //
     // Internal Signal definition
     //
     
-    logic [15:0] period_mask;
-    logic [15:0] compare_mask;
-    logic [15:0] init_carr_mask;
+    // masked period register from event mask handler (register_mask_16bits.sv) 
+    logic [`PWMCOUNT_WIDTH:0] period_mask;
+    // masked compare register from event mask handler (register_mask_16bits.sv) 
+    logic [`PWMCOUNT_WIDTH:0] compare_mask;
+    // masked carrier initial value from event mask handler (register_mask_16bits.sv) 
+    logic [`PWMCOUNT_WIDTH:0] init_carr_mask;
+    //mask event trigger
     logic mask_event;
+    //dead time clock
     logic dt_clk;
-    logic[15:0] carrier;
+    //PWM carrier signal
+    logic[`PWMCOUNT_WIDTH:0] carrier;
+    //PWM master signal
+    logic pwm;
+    //PWM clock
+    logic pwm_clk;
     
+    //
+    // Modules
+    //
     
     div_clock PWMCLK(
         .clk,

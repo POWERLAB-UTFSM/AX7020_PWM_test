@@ -26,8 +26,8 @@ module register_mask_16bits(
     input reset,
     input logic mask_event,
     input _pwm_onoff pwm_onoff,
-    input logic [15:0] reg_in,
-    output logic [15:0] reg_out
+    input logic [`PWMCOUNT_WIDTH:0] reg_in,
+    output logic [`PWMCOUNT_WIDTH:0] reg_out
     );
     
     logic refresh;

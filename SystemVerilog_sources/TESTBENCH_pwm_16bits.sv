@@ -25,23 +25,21 @@ module TESTBENCH_pwm_16bits();
 //=============================================================
 // Signal Definition
 //=============================================================
-    logic [15:0] period;
-    logic [15:0] init_carr;
-    logic [15:0] compare;
-    logic [4:0] pwmclk_divider;
-    logic [4:0] dtclk_divider;
-    logic [15:0] carrier;
+    logic [`PWMCOUNT_WIDTH:0] period;
+    logic [`PWMCOUNT_WIDTH:0] init_carr;
+    logic [`PWMCOUNT_WIDTH:0] compare;
+    logic [`DIVCLK_WIDTH:0] pwmclk_divider;
+    logic [`DIVCLK_WIDTH:0] dtclk_divider;
+    logic [`PWMCOUNT_WIDTH:0] carrier;
     _count_mode count_mode;
     _mask_mode mask_mode;
     _pwm_onoff pwm_onoff;
-    logic pwm;
     logic pwmout_A;
     logic pwmout_B;
-    logic pwm_clk;
-    logic [7:0] dtime_A;
-    logic [7:0] dtime_B;
-    logic [7:0] logic_A;
-    logic [7:0] logic_B;
+    logic [`DTCOUNT_WIDTH:0] dtime_A;
+    logic [`DTCOUNT_WIDTH:0] dtime_B;
+    logic [`DTCOUNT_WIDTH:0] logic_A;
+    logic [`DTCOUNT_WIDTH:0] logic_B;
 
 //=============================================================
 //  Clock & Reset generator
@@ -66,8 +64,8 @@ module TESTBENCH_pwm_16bits();
         mask_mode = MAX_MASK;
         pwm_onoff = PWM_OFF;
         
-        dtime_A = 255;
-        dtime_B = 255;
+        dtime_A = 100;
+        dtime_B = 100;
         logic_A = 0;
         logic_B = 0;
         
@@ -106,10 +104,8 @@ pwm_16bits DUT1(
         .dtime_B,
         .logic_A,
         .logic_B,
-        .pwm,
         .pwmout_A,
-        .pwmout_B,
-        .pwm_clk
+        .pwmout_B
     );	
 		
 //=============================================================

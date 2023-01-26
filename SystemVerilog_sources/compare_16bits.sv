@@ -21,14 +21,14 @@
 
 
 module compare_16bits (
-    input [15:0] carrier,
-    input [15:0] compare,
+    input [`PWMCOUNT_WIDTH:0] carrier,
+    input [`PWMCOUNT_WIDTH:0] compare,
     input _pwm_onoff pwm_onoff,
     output logic pwm
     );
     
     
-    always_comb begin
+    always_latch begin
         if(carrier >= compare) begin
             pwm = 'd0 && pwm_onoff;  
         end

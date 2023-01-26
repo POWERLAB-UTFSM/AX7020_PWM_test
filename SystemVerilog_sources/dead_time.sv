@@ -19,13 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+import PKG_pwm::*;
 
 module dead_time (
     input clk,
 	input reset,
 	input pwm,
-	input [7:0] dtime_A,
-	input [7:0] dtime_B,
+	input [`DTCOUNT_WIDTH:0] dtime_A,
+	input [`DTCOUNT_WIDTH:0] dtime_B,
 	input logic_A,
 	input logic_B,
 	input _pwm_onoff pwm_onoff,
@@ -33,8 +34,8 @@ module dead_time (
 	output logic pwmout_B
     );
     
-    logic [7:0] dtcounter_A;
-    logic [7:0] dtcounter_B;
+    logic [`DTCOUNT_WIDTH:0] dtcounter_A;
+    logic [`DTCOUNT_WIDTH:0] dtcounter_B;
     logic pwmaux_A;
     logic pwmaux_B;
     logic pwm_A;
