@@ -12,15 +12,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="36,473.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="36,638.501 ns"></ZoomEndTime>
-      <Cursor1Time time="36,501.000 ns"></Cursor1Time>
+      <ZoomStartTime time="318.605000 us"></ZoomStartTime>
+      <ZoomEndTime time="392.255001 us"></ZoomEndTime>
+      <Cursor1Time time="338.905000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="148"></NameColumnWidth>
+      <NameColumnWidth column_width="140"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="15" />
+   <wave_markers>
+      <marker time="109845100" label="" />
+      <marker time="330249000" label="" />
+   </wave_markers>
    <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -51,19 +55,9 @@
       <obj_property name="ObjectShortName">compare[15:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/compare_mask" type="array">
-      <obj_property name="ElementShortName">compare_mask[15:0]</obj_property>
-      <obj_property name="ObjectShortName">compare_mask[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/init_carr" type="array">
       <obj_property name="ElementShortName">init_carr[15:0]</obj_property>
       <obj_property name="ObjectShortName">init_carr[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/init_carr_mask" type="array">
-      <obj_property name="ElementShortName">init_carr_mask[15:0]</obj_property>
-      <obj_property name="ObjectShortName">init_carr_mask[15:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/period" type="array">
@@ -98,13 +92,5 @@
    <wvobject fp_name="/TESTBENCH_pwm_16bits/pwmout_B" type="logic">
       <obj_property name="ElementShortName">pwmout_B</obj_property>
       <obj_property name="ObjectShortName">pwmout_B</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/DT1/pwmaux_A" type="logic">
-      <obj_property name="ElementShortName">pwmaux_A</obj_property>
-      <obj_property name="ObjectShortName">pwmaux_A</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TESTBENCH_pwm_16bits/DUT1/DT1/pwmaux_B" type="logic">
-      <obj_property name="ElementShortName">pwmaux_B</obj_property>
-      <obj_property name="ObjectShortName">pwmaux_B</obj_property>
    </wvobject>
 </wave_config>

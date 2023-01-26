@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 import PKG_pwm::*;
 
-module div_pwm_clock(
+module div_clock(
     input clk,
     input reset,
     input logic [4:0] divider,
     input _pwm_onoff pwm_onoff,
-	output logic pwm_clk
+	output logic div_clk
     );
 	
 	logic [4:0] counter;
@@ -33,12 +33,12 @@ module div_pwm_clock(
 	always_ff @(posedge clk,posedge reset) begin
 		if(reset || (pwm_onoff==PWM_OFF)) begin
 			counter <= 4'b0;
-			pwm_clk <= 1'b0;
+			div_clk <= 1'b0;
 		end
 		else begin
 			if(counter == divider) begin
 				counter <= 4'b0;
-				pwm_clk <= ~pwm_clk;
+				div_clk <= ~div_clk;
 			end
 			else begin
 				counter <= counter + 1'b1;

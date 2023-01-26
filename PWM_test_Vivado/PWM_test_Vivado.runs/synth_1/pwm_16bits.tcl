@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/synth_1/pwm_16bits.tcl"
+  variable script "E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/synth_1/pwm_16bits.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,32 +70,35 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 4
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.cache/wt} [current_project]
-set_property parent.project_path {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.xpr} [current_project]
+set_property webtalk.parent_dir E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.cache/wt [current_project]
+set_property parent.project_path E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.cache/ip} [current_project]
+set_property ip_repo_paths {
+  e:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0
+  e:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0
+  e:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0
+  e:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0
+} [current_project]
+update_ip_catalog
+set_property ip_output_repo e:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/PKG_pwm.sv}
-  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/carrier_gen_16bits.sv}
-  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/compare_16bits.sv}
-  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/dead_time.sv}
-  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/div_pwm_clock.sv}
-  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/register_mask_16bits.sv}
-  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/pwm_16bits.sv}
+  E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/PKG_pwm.sv
+  E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/carrier_gen_16bits.sv
+  E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/compare_16bits.sv
+  E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/dead_time.sv
+  E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/div_clock.sv
+  E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/register_mask_16bits.sv
+  E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/pwm_16bits.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -106,12 +109,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.srcs/constrs_1/new/constraint_fpga.xdc}}
-set_property used_in_implementation false [get_files {{D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.srcs/constrs_1/new/constraint_fpga.xdc}}]
+read_xdc E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.srcs/constrs_1/new/constraint_fpga.xdc
+set_property used_in_implementation false [get_files E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.srcs/constrs_1/new/constraint_fpga.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.srcs/utils_1/imports/synth_1/pwm_16bits.dcp}
+read_checkpoint -auto_incremental -incremental E:/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.srcs/utils_1/imports/synth_1/pwm_16bits.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

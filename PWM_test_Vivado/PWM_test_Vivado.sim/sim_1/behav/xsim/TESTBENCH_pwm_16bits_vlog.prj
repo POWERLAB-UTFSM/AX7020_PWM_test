@@ -4,7 +4,7 @@ sv xil_defaultlib  \
 "../../../../../SystemVerilog_sources/carrier_gen_16bits.sv" \
 "../../../../../SystemVerilog_sources/compare_16bits.sv" \
 "../../../../../SystemVerilog_sources/dead_time.sv" \
-"../../../../../SystemVerilog_sources/div_pwm_clock.sv" \
+"../../../../../SystemVerilog_sources/div_clock.sv" \
 "../../../../../SystemVerilog_sources/pwm_16bits.sv" \
 "../../../../../SystemVerilog_sources/register_mask_16bits.sv" \
 "../../../../../SystemVerilog_sources/TESTBENCH_pwm_16bits.sv" \

@@ -33,7 +33,8 @@ module pwm_16bits  (
     input [15:0] init_carr,
     // PWM compare 
     input [15:0] compare,
-    input [4:0] clk_divider,
+    input [4:0] pwmclk_divider,
+    input [4:0] dtclk_divider,
     input _count_mode count_mode,
     input _mask_mode mask_mode,
     input _pwm_onoff pwm_onoff,
@@ -47,7 +48,7 @@ module pwm_16bits  (
     output logic pwmout_A,
     output logic pwmout_B,
     output logic pwm_clk
-
+    
     );
     
     //
@@ -58,15 +59,16 @@ module pwm_16bits  (
     logic [15:0] compare_mask;
     logic [15:0] init_carr_mask;
     logic mask_event;
+    logic dt_clk;
     logic[15:0] carrier;
     
     
-    div_pwm_clock PWMCLK(
+    div_clock PWMCLK(
         .clk,
         .reset,
-        .divider(clk_divider),
+        .divider(pwmclk_divider),
         .pwm_onoff,
-        .pwm_clk
+        .div_clk(pwm_clk)
     );
     
     register_mask_16bits REG_PERIOD(
@@ -115,8 +117,16 @@ module pwm_16bits  (
         .pwm
     );
     
+    div_clock DTCLK(
+        .clk,
+        .reset,
+        .divider(dtclk_divider),
+        .pwm_onoff,
+        .div_clk(dt_clk)
+    );
+    
     dead_time DT1(
-       .clk,
+       .clk(dt_clk),
 	   .reset,
 	   .pwm,
 	   .dtime_A,

@@ -28,7 +28,8 @@ module TESTBENCH_pwm_16bits();
     logic [15:0] period;
     logic [15:0] init_carr;
     logic [15:0] compare;
-    logic [4:0] clk_divider;
+    logic [4:0] pwmclk_divider;
+    logic [4:0] dtclk_divider;
     logic [15:0] carrier;
     _count_mode count_mode;
     _mask_mode mask_mode;
@@ -59,13 +60,14 @@ module TESTBENCH_pwm_16bits();
         period ='d2000;
         init_carr ='d500;
         compare ='d1000; 
-        clk_divider ='d0;
+        pwmclk_divider ='d2;
+        dtclk_divider ='d1;
         count_mode = COUNT_UPDOWN;
         mask_mode = MAX_MASK;
         pwm_onoff = PWM_OFF;
         
-        dtime_A = 10;
-        dtime_B = 10;
+        dtime_A = 255;
+        dtime_B = 255;
         logic_A = 0;
         logic_B = 0;
         
@@ -95,7 +97,8 @@ pwm_16bits DUT1(
         .period,
         .init_carr,
         .compare,
-        .clk_divider,
+        .pwmclk_divider,
+        .dtclk_divider,
         .count_mode,
         .mask_mode,
         .pwm_onoff,
