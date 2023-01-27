@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Jan 26 16:59:23 2023
-# Process ID: 23452
+# Start of session at: Fri Jan 27 14:52:08 2023
+# Process ID: 24188
 # Current directory: D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/synth_1
 # Command line: vivado.exe -log pwm_16bits.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pwm_16bits.tcl
 # Log file: D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/synth_1/pwm_16bits.vds
@@ -11,7 +11,7 @@
 # Running On: AHWV-AC3E-UTFSM, OS: Windows, CPU Frequency: 3200 MHz, CPU Physical cores: 16, Host memory: 17127 MB
 #-----------------------------------------------------------
 source pwm_16bits.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 523.723 ; gain = 95.527
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 522.594 ; gain = 98.230
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0'.
 WARNING: [IP_Flow 19-2207] Repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0' already exists; ignoring attempt to add it again.
@@ -35,16 +35,23 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22292
+INFO: [Synth 8-7075] Helper process launched with PID 3184
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+CRITICAL WARNING: [Synth 8-9339] data object 'register_concat_mask' is already declared [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/pwm_16bits.sv:105]
+INFO: [Synth 8-6826] previous declaration of 'register_concat_mask' is from here [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/pwm_16bits.sv:85]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'register_concat_mask' is ignored [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/pwm_16bits.sv:105]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1369.379 ; gain = 408.664
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1370.344 ; gain = 409.508
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'pwm_16bits' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/pwm_16bits.sv:36]
-INFO: [Synth 8-6157] synthesizing module 'div_clock' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/div_clock.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'div_clock' (0#1) [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/div_clock.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'configregpwm_concatenate' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/configregpwm_concatenate.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'configregpwm_concatenate' (0#1) [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/configregpwm_concatenate.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'configregpwm_split' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/configregpwm_split.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'configregpwm_split' (0#1) [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/configregpwm_split.sv:24]
 INFO: [Synth 8-6157] synthesizing module 'register_mask_16bits' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/register_mask_16bits.sv:24]
 INFO: [Synth 8-6155] done synthesizing module 'register_mask_16bits' (0#1) [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/register_mask_16bits.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'div_clock' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/div_clock.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'div_clock' (0#1) [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/div_clock.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'carrier_gen_16bits' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/carrier_gen_16bits.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'carrier_gen_16bits' (0#1) [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/carrier_gen_16bits.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'compare_16bits' [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/compare_16bits.sv:23]
@@ -55,19 +62,30 @@ INFO: [Synth 8-6155] done synthesizing module 'pwm_16bits' (0#1) [D:/Backup Alan
 WARNING: [Synth 8-7137] Register init_carr_buff_reg in module carrier_gen_16bits has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/carrier_gen_16bits.sv:59]
 WARNING: [Synth 8-7137] Register dtcounter_A_reg in module dead_time has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/dead_time.sv:60]
 WARNING: [Synth 8-7137] Register dtcounter_B_reg in module dead_time has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/dead_time.sv:61]
+WARNING: [Synth 8-7129] Port register_concat[15] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[14] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[13] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[12] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[11] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[10] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[9] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[8] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[7] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[6] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[5] in module configregpwm_split is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.242 ; gain = 500.527
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1461.934 ; gain = 501.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.242 ; gain = 500.527
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1461.934 ; gain = 501.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.242 ; gain = 500.527
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1461.934 ; gain = 501.098
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1461.242 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1461.934 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -76,32 +94,32 @@ Parsing XDC File [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM
 Finished Parsing XDC File [D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.srcs/constrs_1/new/constraint_fpga.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1492.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1568.789 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1492.094 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1568.789 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1492.094 ; gain = 531.379
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1492.094 ; gain = 531.379
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1492.094 ; gain = 531.379
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1492.094 ; gain = 531.379
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -115,12 +133,12 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
-	               16 Bit    Registers := 5     
+	               16 Bit    Registers := 6     
 	                8 Bit    Registers := 2     
 	                5 Bit    Registers := 2     
 	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input   16 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 14    
 	   2 Input    8 Bit        Muxes := 4     
 	   2 Input    5 Bit        Muxes := 4     
 	   2 Input    1 Bit        Muxes := 14    
@@ -141,25 +159,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1492.094 ; gain = 531.379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1492.094 ; gain = 531.379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1492.652 ; gain = 531.938
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1494.754 ; gain = 534.039
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -177,37 +195,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -231,32 +249,33 @@ Report Cell Usage:
 |6     |LUT4   |    68|
 |7     |LUT5   |    11|
 |8     |LUT6   |    53|
-|9     |FDCE   |    97|
-|10    |FDRE   |    16|
+|9     |FDCE   |    49|
+|10    |FDRE   |    69|
 |11    |IBUF   |    83|
 |12    |OBUF   |     2|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1500.578 ; gain = 509.012
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1500.578 ; gain = 539.863
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.789 ; gain = 501.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1568.789 ; gain = 607.953
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1512.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1568.789 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1516.254 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1568.789 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: c3393493
+Synth Design complete, checksum: 97da9c98
 INFO: [Common 17-83] Releasing license: Synthesis
-40 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+45 Infos, 19 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1516.254 ; gain = 964.395
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1568.789 ; gain = 1017.340
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/synth_1/pwm_16bits.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pwm_16bits_utilization_synth.rpt -pb pwm_16bits_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 26 17:00:19 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 27 14:53:11 2023...

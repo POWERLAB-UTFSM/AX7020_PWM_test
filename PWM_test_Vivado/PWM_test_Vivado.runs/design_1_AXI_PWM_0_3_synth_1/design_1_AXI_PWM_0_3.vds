@@ -1,0 +1,295 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jan 27 17:08:07 2023
+# Process ID: 29408
+# Current directory: D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/design_1_AXI_PWM_0_3_synth_1
+# Command line: vivado.exe -log design_1_AXI_PWM_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_AXI_PWM_0_3.tcl
+# Log file: D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/design_1_AXI_PWM_0_3_synth_1/design_1_AXI_PWM_0_3.vds
+# Journal file: D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/design_1_AXI_PWM_0_3_synth_1\vivado.jou
+# Running On: AHWV-AC3E-UTFSM, OS: Windows, CPU Frequency: 3200 MHz, CPU Physical cores: 16, Host memory: 17127 MB
+#-----------------------------------------------------------
+source design_1_AXI_PWM_0_3.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0'.
+WARNING: [IP_Flow 19-2207] Repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0'.
+WARNING: [IP_Flow 19-2207] Repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0'.
+WARNING: [IP_Flow 19-2207] Repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/ip_repo/AXI_PWM_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_AXI_PWM_0_3
+Command: synth_design -top design_1_AXI_PWM_0_3 -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15944
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'S_AXI_CLK', assumed default net type 'wire' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:403]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:49 . Memory (MB): peak = 1368.609 ; gain = 406.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_AXI_PWM_0_3' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ip/design_1_AXI_PWM_0_3/synth/design_1_AXI_PWM_0_3.v:53]
+INFO: [Synth 8-6157] synthesizing module 'AXI_PWM_v1_0' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'AXI_PWM_v1_0_S00_AXI' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:232]
+INFO: [Synth 8-226] default block is never used [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:373]
+INFO: [Synth 8-6157] synthesizing module 'pwm_16bits' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/pwm_16bits.sv:36]
+INFO: [Synth 8-6157] synthesizing module 'configregpwm_concatenate' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/configregpwm_concatenate.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'configregpwm_concatenate' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/configregpwm_concatenate.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'configregpwm_split' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/configregpwm_split.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'configregpwm_split' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/configregpwm_split.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'register_mask_16bits' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/register_mask_16bits.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'register_mask_16bits' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/register_mask_16bits.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'div_clock' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/div_clock.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'div_clock' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/div_clock.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'carrier_gen_16bits' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/carrier_gen_16bits.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'carrier_gen_16bits' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/carrier_gen_16bits.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'compare_16bits' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/compare_16bits.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'compare_16bits' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/compare_16bits.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dead_time' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/dead_time.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'dead_time' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/dead_time.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_16bits' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/pwm_16bits.sv:36]
+WARNING: [Synth 8-689] width (8) of port connection 'logic_A' does not match port width (1) of module 'pwm_16bits' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:415]
+WARNING: [Synth 8-689] width (8) of port connection 'logic_B' does not match port width (1) of module 'pwm_16bits' [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:416]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_PWM_v1_0_S00_AXI' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_PWM_v1_0' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_AXI_PWM_0_3' (0#1) [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ip/design_1_AXI_PWM_0_3/synth/design_1_AXI_PWM_0_3.v:53]
+WARNING: [Synth 8-7137] Register init_carr_buff_reg in module carrier_gen_16bits has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/carrier_gen_16bits.sv:59]
+WARNING: [Synth 8-7137] Register dtcounter_A_reg in module dead_time has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/dead_time.sv:60]
+WARNING: [Synth 8-7137] Register dtcounter_B_reg in module dead_time has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/src/dead_time.sv:61]
+WARNING: [Synth 8-3848] Net S_AXI_CLK in module/entity AXI_PWM_v1_0_S00_AXI does not have driver. [d:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.gen/sources_1/bd/design_1/ipshared/ed63/hdl/AXI_PWM_v1_0_S00_AXI.v:403]
+WARNING: [Synth 8-7129] Port register_concat[15] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[14] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[13] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[12] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[11] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[10] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[9] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[8] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[7] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[6] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port register_concat[5] in module configregpwm_split is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module AXI_PWM_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module AXI_PWM_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module AXI_PWM_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module AXI_PWM_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module AXI_PWM_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module AXI_PWM_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:01:01 . Memory (MB): peak = 1462.961 ; gain = 500.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:01:02 . Memory (MB): peak = 1462.961 ; gain = 500.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:01:02 . Memory (MB): peak = 1462.961 ; gain = 500.941
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1462.961 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1515.273 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1515.277 ; gain = 0.004
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:01:48 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:01:49 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:01:49 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:01:50 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               16 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input   16 Bit        Muxes := 14    
+	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 19    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module design_1_AXI_PWM_0_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module design_1_AXI_PWM_0_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module design_1_AXI_PWM_0_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module design_1_AXI_PWM_0_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module design_1_AXI_PWM_0_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module design_1_AXI_PWM_0_3 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:01:56 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:02:05 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:02:05 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:02:06 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:02:13 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:02:13 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:02:13 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:02:13 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:02:13 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:02:13 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     1|
+|3     |LUT3 |     1|
+|4     |LUT4 |    22|
+|5     |LUT6 |    36|
+|6     |FDRE |   169|
+|7     |FDSE |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:02:13 . Memory (MB): peak = 1515.277 ; gain = 553.258
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:01:40 . Memory (MB): peak = 1515.277 ; gain = 500.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:02:14 . Memory (MB): peak = 1515.277 ; gain = 553.258
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1515.277 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1515.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 19442834
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+INFO: [Common 17-1381] The checkpoint 'D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/design_1_AXI_PWM_0_3_synth_1/design_1_AXI_PWM_0_3.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_AXI_PWM_0_3, cache-ID = 7af9df64767a8ed2
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/PWM_test_Vivado/PWM_test_Vivado.runs/design_1_AXI_PWM_0_3_synth_1/design_1_AXI_PWM_0_3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_AXI_PWM_0_3_utilization_synth.rpt -pb design_1_AXI_PWM_0_3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 27 17:11:35 2023...

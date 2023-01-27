@@ -70,10 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 4
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-2
 
@@ -99,6 +95,8 @@ read_verilog -library xil_defaultlib -sv {
   {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/PKG_pwm.sv}
   {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/carrier_gen_16bits.sv}
   {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/compare_16bits.sv}
+  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/configregpwm_concatenate.sv}
+  {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/configregpwm_split.sv}
   {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/dead_time.sv}
   {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/div_clock.sv}
   {D:/Backup Alan Wilson/Repos/POWERLAB-UTFSM/AX7020_PWM_test/SystemVerilog_sources/register_mask_16bits.sv}

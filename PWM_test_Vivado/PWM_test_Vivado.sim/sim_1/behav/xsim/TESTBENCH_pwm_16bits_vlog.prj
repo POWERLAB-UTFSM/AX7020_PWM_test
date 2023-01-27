@@ -3,6 +3,8 @@ sv xil_defaultlib  \
 "../../../../../SystemVerilog_sources/PKG_pwm.sv" \
 "../../../../../SystemVerilog_sources/carrier_gen_16bits.sv" \
 "../../../../../SystemVerilog_sources/compare_16bits.sv" \
+"../../../../../SystemVerilog_sources/configregpwm_concatenate.sv" \
+"../../../../../SystemVerilog_sources/configregpwm_split.sv" \
 "../../../../../SystemVerilog_sources/dead_time.sv" \
 "../../../../../SystemVerilog_sources/div_clock.sv" \
 "../../../../../SystemVerilog_sources/pwm_16bits.sv" \
